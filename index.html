@@ -1,0 +1,2094 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<style>
+    .header{
+        height: 80px;
+        background-color: rgb(243, 243, 243);
+        display: flex;
+        padding-left: 50px;
+        padding-right: 50px;
+        align-items: center;
+        box-shadow: 10px 10px 10px rgb(168, 168, 168);
+        border-radius: 15px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+
+    }
+    .community{
+        width: 200px;
+    }
+    .logo{
+flex: 1;
+display: flex;
+align-items: center;
+justify-content: center;
+    }
+    .buy-token{
+        width: 100px;
+        display: flex;
+        justify-content: center;
+    }
+    .community img{
+        width: 26px;
+        border-radius: 13px;
+    }
+    .logo img{
+        width: 100px;
+        height: 100%;
+        border-radius: 50px;
+    }
+    .buy-token-button{
+        padding-top: 6px;
+        padding-bottom: 6px;
+        border-radius: 15px;
+        border: solid;
+        border-color: rgb(235, 235, 235);
+        background-color: rgb(19, 20, 68);
+    color: rgb(204, 204, 204);
+    font-size: 0.8669rem;
+    font-family: Arial;
+    font-weight: 700;
+    }
+    .logo-name{
+        padding-left: 5px;
+        padding-right: 5px;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+/* under header*/
+
+.under-header{
+    margin-top: 150px;
+    margin-left: 50px;
+    margin-right: 50px;
+    background-color: rgb(8,9,48);
+    border-radius: 20px;
+    color: white;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    grid-template-columns: 1fr 1fr 3fr 1fr 1fr;
+box-shadow: 10px 10px 5px rgb(61, 62, 83);
+    padding-top: 20px;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+
+}
+.token-info{
+    flex: 1;
+    min-width: 0;
+    padding-top: 0;
+}
+
+.token-name{
+    flex: 1;
+    min-width: 0;
+}
+.contract-address{
+    flex: 3;
+    min-width: 0;
+}
+
+.network-name{
+    flex: 1;
+    min-width: 0;
+}
+.decimal-length{
+    flex: 1;
+    min-width: 0;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+
+.intro-text p{
+    text-align: center;
+    margin-top: 10px;
+    padding-left: 60px;
+    padding-right: 60px;
+font-weight: bold;
+font-family: arial;
+ 
+}
+.intro-text{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    color: rgb(245, 210, 12);
+}
+.title-para{
+    font-size: 40px;
+    padding-top: 20px;
+    margin-top: 100px;
+    margin-bottom: 3px;
+    color: white;
+}
+.buy-button{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 200px;
+}
+.buy-button-box{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: arial;
+    background-color: rgb(255, 187, 11);
+    color: black;
+    border: none;
+    border-radius: 8px;
+}
+.link-div{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-bottom: 200px;
+    background-color: rgb(147, 148, 185);
+    height: 100px;
+    box-shadow: 10px 10px 5px;
+    border-radius: 20px;
+}
+.link-div img{
+    width: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px;
+   
+}
+.tale-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0;
+    background-color: rgb(19, 20, 68);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-radius: 20px 20px 0 0;
+}
+.tale-div p{
+    font-family: arial;
+    font-size: 18px;
+    color: white;
+}
+.disclaimer-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0;
+    background-color: rgb(19, 20, 68);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 0 0 20px 20px;
+}
+.disclaimer-div p{
+    font-family: arial;
+font-size: 20px;
+    color: yellow;
+}
+
+.roadmap-para{
+    margin-top: 400px;
+    font-size: 100px;
+    text-align: center;
+    color: yellow;
+    background-color: rgb(19, 20, 68);
+   
+}
+.roadmap-head{
+    display: flex;
+    flex-direction: row;
+    background-color:  rgb(19, 20, 68);
+    color: white;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    padding-left: 20px;
+}
+.roadmap-head div{
+    flex: 1;
+    padding-left: 25px;
+    font-size: 30px;
+}
+.last-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 1 0px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 100px;
+    background-color: rgb(219, 219, 228);
+    box-shadow:  0 0 80px 80px rgb(219, 219, 228);
+}
+.last-div div{
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: arial;
+    background-color:rgb(149, 149, 182);
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 5px;
+    padding-top: 25px;
+}
+.for-background{
+    background: url("3dphoto/pexels-taryn-elliott-4426358.jpeg") 
+    no-repeat center center/cover;
+    margin-top: 50px;
+}
+.dog-div{
+    height: 800px;
+    background: url("3dphoto/pexels-binyamin-mellish-544269.jpeg") 
+    no-repeat center center/cover;
+    text-align: center;
+    color: aliceblue;
+    font-size: 100px;
+    padding-top: 50px;
+}
+.buy-btn {
+    text-decoration: none;
+    color: white;
+}
+</style>
+
+
+    </head>
+
+
+
+
+
+
+
+    <body style="
+    background-color:rgb(226, 226, 231);">
+        <meta name="veiwport"
+        content="width=device-width, initial-scale=1.0">
+        <div class="header">
+<div class="community">
+   <img src="icons/download (1).jpeg">
+   <img src="icons/download (2).jpeg">
+   <img src="icons/download.jpeg">
+   <a href="https://twitter.com/Vendoji2?t=PMjDleqRFqV0Y3GLXqN3EA&s=09"><img src="icons/tweeter.jpeg"></a>
+</div>
+
+<div class="logo">
+    <img src="icons/download (3).jpeg">
+    <p class="logo-name">LABRADOR</p>
+
+</div>
+
+<div class="buy-token">
+    <button class="buy-token-button">
+   <a class="buy-btn" href="new.html">Buy Token</a>
+</button> </div>
+        </div>
+<div class="for-background">
+        <div class="under-header">
+            <div class="token-info">TOKEN INFO</div>
+            <div class="token-name">LABRADOR Token</div> 
+            <div class="contract-address">
+                <P>SMART CONTRACT</P>
+                <P>0xfdc2695634A6Af54bFA7cF723D9D090eFfbF12cB</P>
+            </div>
+            <div class="network-name">
+                <P>NETWORK</P>
+                <P>BSC</P>
+            </div>
+            <div class="decimal-length">
+                <p>
+                DECIMALS    
+                </p>
+                <P>
+                9
+                </P>
+            </div>
+        </div>
+
+    <div class="intro-text">
+        <p class="title-para">In LABRADOR We Trust.</p>
+            <p>Hyper Deflationary, self-generating automatic</p> 
+            <p>liquidity that pays out static rewards to holders.</p>
+            <p>Simply hold LABRADOR in your wallet and you</p>
+            <p>will get more on every transaction!</p>
+    </div>
+    <div class="buy-button">
+       <marquee behavior="alternate"
+       width="400px"
+       scrollamount="5"
+       loop="10"><a href="new.html"><button class="buy-button-box">BUY LABRADOR TOKEN</button></a></marquee>
+    </div>
+    <div class="link-div">
+<img src="link icons/58048126-0-CMClogo.jpeg">
+<img src="link icons/download (1).jpeg">
+<img src="link icons/download (2).jpeg">
+<img src="link icons/download (3).jpeg">
+<img src="link icons/download (4).jpeg">
+    </div>
+    </div>
+
+    <div class="tale-div">
+        <p>THE LABRADOR TALES</p>
+        <p>Labrador is the most loved dog in the world</p>
+        <p>and we are here to reward every dog owner who is a</p>
+        <p>Labrador token holder. This project is introduced</p>
+        <p>because much has not been done for pets in our time</p>
+        <p>It is a symbol of honor to your dog and a sign of great</p>
+        <p>investment to hold LABRADORTOKEN. Our clear roadmap is</p>
+        <p>our unique strength. A hidden gem that will become worlds best</p>
+        <p>WE ARE ALL IN ON LABRADOR!!!</p>
+    </div>
+    
+
+    <div class="disclaimer-div">
+       
+        <p>Let's create a supportive and motivated community of
+        holders who are ready to work hard, contribute & risk it all for our</p>
+        <p>lovely dogs! Together, we can launch LABRADOR to the Moon and
+        beyond!</p>
+        <p>LABRADOR was initially created as a meme just like
+        doge.</p>
+    </div>
+
+    <p  class="roadmap-para">ROADMAP</p>
+
+<div class="dog-div">I will prove to the world that i love humanns</div>
+    <div class="roadmap-head">
+        <div>Year 2022</div>
+        <div>Year 2023</div>
+        <div>Year 2024</div>
+        <div>Year 2025</div>
+    </div>
+
+
+    <div style="display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 10px;
+    column-gap: 10px;
+    ">
+    <div style="display: grid;
+    background-color: white;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+    row-gap: 10px;">
+    <div>
+        <div style="height: 70%;
+        background-color: yellow;
+        padding-top: 5px;
+        margin-top: 5px;
+        border-radius: 10px;
+        width: 70%;
+        margin-left: 20px;
+        box-shadow: 5px 5px 5px;">
+        <div style="
+        height: 100%;
+        background-color: blue;
+        padding-top: 5px;
+        margin-top: 5px;
+        border-radius: 10px;
+        width: 100%;
+        margin-left: 5px;
+        box-shadow: 5px 5px 5px blue;">
+        <div style="
+        height: 100%;
+        background-color: rgb(19, 20, 68);
+        padding-top: 4px;
+        margin-top: 5px;
+        border-radius: 10px;
+        width: 100%;
+        margin-left: 5px;
+        box-shadow: 5px 5px 5px rgb(0, 255, 106);">
+        <p style="color: white;
+        padding-left: 10px;">
+         First Labrador token innitiative
+        </p></div></div> 
+        </div>
+    </div>
+    <div>
+        <div style="height: 70%;
+        background-color: yellow;
+        padding-top: 5px;
+        margin-top: 5px;
+        border-radius: 10px;
+        width: 70%;
+        margin-left: 20px;
+        box-shadow: 5px 5px 5px;">
+        <div style="
+        height: 100%;
+        background-color: blue;
+        padding-top: 5px;
+        margin-top: 5px;
+        border-radius: 10px;
+        width: 100%;
+        margin-left: 5px;
+        box-shadow: 5px 5px 5px blue;">
+        <div style="
+        height: 100%;
+        background-color: rgb(19, 20, 68);
+        padding-top: 4px;
+        margin-top: 5px;
+        border-radius: 10px;
+        width: 100%;
+        margin-left: 5px;
+        box-shadow: 5px 5px 5px rgb(0, 255, 106);">
+        <p style="color: white;
+        padding-left: 10px;">
+         Partner with Mars Pet, Inc.
+        </p></div></div> 
+        </div>
+    </div>
+    <div>
+        <div style="height: 70%;
+        background-color: yellow;
+        padding-top: 5px;
+        margin-top: 5px;
+        border-radius: 10px;
+        width: 70%;
+        margin-left: 20px;
+        box-shadow: 5px 5px 5px;">
+        <div style="
+        height: 100%;
+        background-color: blue;
+        padding-top: 5px;
+        margin-top: 5px;
+        border-radius: 10px;
+        width: 100%;
+        margin-left: 5px;
+        box-shadow: 5px 5px 5px blue;">
+        <div style="
+        height: 100%;
+        background-color: rgb(19, 20, 68);
+        padding-top: 4px;
+        margin-top: 5px;
+        border-radius: 10px;
+        width: 100%;
+        margin-left: 5px;
+        box-shadow: 5px 5px 5px rgb(0, 255, 106);">
+        <p style="color: white;
+        padding-left: 10px;">
+          Hiring of silicon valley developers 
+        </p></div></div> 
+        </div>
+    </div>
+    <div>
+        <div style="height: 70%;
+        background-color: yellow;
+        padding-top: 5px;
+        margin-top: 5px;
+        border-radius: 10px;
+        width: 70%;
+        margin-left: 20px;
+        box-shadow: 5px 5px 5px;">
+        <div style="
+        height: 100%;
+        background-color: blue;
+        padding-top: 5px;
+        margin-top: 5px;
+        border-radius: 10px;
+        width: 100%;
+        margin-left: 5px;
+        box-shadow: 5px 5px 5px blue;">
+        <div style="
+        height: 100%;
+        background-color: rgb(19, 20, 68);
+        padding-top: 4px;
+        margin-top: 5px;
+        border-radius: 10px;
+        width: 100%;
+        margin-left: 5px;
+        box-shadow: 5px 5px 5px rgb(0, 255, 106);">
+        <p style="color: white;
+        padding-left: 10px;">
+       Private sale ends</p></div></div> 
+        </div>
+    </div>
+</div>
+
+<div style="display: grid;
+background-color: white;
+grid-template-columns: 1fr 1fr;
+column-gap: 10px;
+row-gap: 10px;">
+<div>
+    <div style="height: 70%;
+    background-color: yellow;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 70%;
+    margin-left: 20px;
+    box-shadow: 5px 5px 5px;">
+    <div style="
+    height: 100%;
+    background-color: blue;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px blue;">
+    <div style="
+    height: 100%;
+    background-color: rgb(19, 20, 68);
+    padding-top: 4px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px rgb(0, 255, 106);">
+    <p style="color: white;
+    padding-left: 10px;">
+     AI Labrador retriever
+    </p></div></div> 
+    </div>
+</div>
+<div>
+    <div style="height: 70%;
+    background-color: yellow;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 70%;
+    margin-left: 20px;
+    box-shadow: 5px 5px 5px;">
+    <div style="
+    height: 100%;
+    background-color: blue;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px blue;">
+    <div style="
+    height: 100%;
+    background-color: rgb(19, 20, 68);
+    padding-top: 4px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px rgb(0, 255, 106);">
+    <p style="color: white;
+    padding-left: 10px;">
+     Partnership with Elon musk
+    </p></div></div> 
+    </div>
+</div>
+<div>
+    <div style="height: 70%;
+    background-color: yellow;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 70%;
+    margin-left: 20px;
+    box-shadow: 5px 5px 5px;">
+    <div style="
+    height: 100%;
+    background-color: blue;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px blue;">
+    <div style="
+    height: 100%;
+    background-color: rgb(19, 20, 68);
+    padding-top: 4px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px rgb(0, 255, 106);">
+    <p style="color: white;
+    padding-left: 10px;">
+     Add more liquidity pool
+    </p></div></div> 
+    </div>
+</div>
+<div>
+    <div style="height: 70%;
+    background-color: yellow;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 70%;
+    margin-left: 20px;
+    box-shadow: 5px 5px 5px;">
+    <div style="
+    height: 100%;
+    background-color: blue;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px blue;">
+    <div style="
+    height: 100%;
+    background-color: rgb(19, 20, 68);
+    padding-top: 4px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px rgb(0, 255, 106);">
+    <p style="color: white;
+    padding-left: 10px;">
+     Partnership with Twitter
+    </p></div></div> 
+    </div>
+</div>
+</div>
+
+<div style="display: grid;
+background-color: white;
+grid-template-columns: 1fr 1fr;
+column-gap: 10px;
+row-gap: 10px;">
+<div>
+    <div style="height: 70%;
+    background-color: yellow;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 70%;
+    margin-left: 20px;
+    box-shadow: 5px 5px 5px;">
+    <div style="
+    height: 100%;
+    background-color: blue;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px blue;">
+    <div style="
+    height: 100%;
+    background-color: rgb(19, 20, 68);
+    padding-top: 4px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px rgb(0, 255, 106);">
+    <p style="color: white;
+    padding-left: 10px;">
+     Token contract launch
+    </p></div></div> 
+    </div>
+</div>
+<div>
+    <div style="height: 70%;
+    background-color: yellow;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 70%;
+    margin-left: 20px;
+    box-shadow: 5px 5px 5px;">
+    <div style="
+    height: 100%;
+    background-color: blue;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px blue;">
+    <div style="
+    height: 100%;
+    background-color: rgb(19, 20, 68);
+    padding-top: 4px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px rgb(0, 255, 106);">
+    <p style="color: white;
+    padding-left: 10px;">
+     Airdrops to private sale holders
+    </p></div></div> 
+    </div>
+</div>
+<div>
+    <div style="height: 70%;
+    background-color: yellow;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 70%;
+    margin-left: 20px;
+    box-shadow: 5px 5px 5px;">
+    <div style="
+    height: 100%;
+    background-color: blue;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px blue;">
+    <div style="
+    height: 100%;
+    background-color: rgb(19, 20, 68);
+    padding-top: 4px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px rgb(0, 255, 106);">
+    <p style="color: white;
+    padding-left: 10px;">
+    Welcome Angel investors, USA only
+    </p></div></div> 
+    </div>
+</div>
+<div>
+    <div style="height: 70%;
+    background-color: yellow;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 70%;
+    margin-left: 20px;
+    box-shadow: 5px 5px 5px;">
+    <div style="
+    height: 100%;
+    background-color: blue;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px blue;">
+    <div style="
+    height: 100%;
+    background-color: rgb(19, 20, 68);
+    padding-top: 4px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px rgb(0, 255, 106);">
+    <p style="color: white;
+    padding-left: 10px;">
+     First marketing campaign
+    </p></div></div> 
+    </div>
+</div>
+</div>
+
+<div style="display: grid;
+background-color: white;
+grid-template-columns: 1fr 1fr;
+column-gap: 10px;
+row-gap: 10px;">
+<div>
+    <div style="height: 70%;
+    background-color: yellow;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 70%;
+    margin-left: 20px;
+    box-shadow: 5px 5px 5px;">
+    <div style="
+    height: 100%;
+    background-color: blue;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px blue;">
+    <div style="
+    height: 100%;
+    background-color: rgb(19, 20, 68);
+    padding-top: 4px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px rgb(0, 255, 106);">
+    <p style="color: white;
+    padding-left: 10px;">
+     Partnership with Coinbase
+    </p></div></div> 
+    </div>
+</div>
+<div>
+    <div style="height: 70%;
+    background-color: yellow;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 70%;
+    margin-left: 20px;
+    box-shadow: 5px 5px 5px;">
+    <div style="
+    height: 100%;
+    background-color: blue;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px blue;">
+    <div style="
+    height: 100%;
+    background-color: rgb(19, 20, 68);
+    padding-top: 4px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px rgb(0, 255, 106);">
+    <p style="color: white;
+    padding-left: 10px;">
+     Launch of Labrador metaverse
+    </p></div></div> 
+    </div>
+</div>
+<div>
+    <div style="height: 70%;
+    background-color: yellow;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 70%;
+    margin-left: 20px;
+    box-shadow: 5px 5px 5px;">
+    <div style="
+    height: 100%;
+    background-color: blue;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px blue;">
+    <div style="
+    height: 100%;
+    background-color: rgb(19, 20, 68);
+    padding-top: 4px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px rgb(0, 255, 106);">
+    <p style="color: white;
+    padding-left: 10px;">
+Coinbase listing
+    </p></div></div> 
+    </div>
+</div>
+<div>
+    <div style="height: 70%;
+    background-color: yellow;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 70%;
+    margin-left: 20px;
+    box-shadow: 5px 5px 5px;">
+    <div style="
+    height: 100%;
+    background-color: blue;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px blue;">
+    <div style="
+    height: 100%;
+    background-color: rgb(19, 20, 68);
+    padding-top: 4px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px rgb(0, 255, 106);">
+    <p style="color: white;
+    padding-left: 10px;">
+     Marketing (Us market)
+    </p></div></div> 
+    </div>
+</div>
+</div>
+
+<div style="display: grid;
+background-color: white;
+grid-template-columns: 1fr 1fr;
+column-gap: 10px;
+row-gap: 10px;">
+<div>
+    <div style="height: 70%;
+    background-color: yellow;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 70%;
+    margin-left: 20px;
+    box-shadow: 5px 5px 5px;">
+    <div style="
+    height: 100%;
+    background-color: blue;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px blue;">
+    <div style="
+    height: 100%;
+    background-color: rgb(19, 20, 68);
+    padding-top: 4px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px rgb(0, 255, 106);">
+    <p style="color: white;
+    padding-left: 10px;">
+     2 milliom dollars in venture capital raised
+    </p></div></div> 
+    </div>
+</div>
+<div>
+    <div style="height: 70%;
+    background-color: yellow;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 70%;
+    margin-left: 20px;
+    box-shadow: 5px 5px 5px;">
+    <div style="
+    height: 100%;
+    background-color: blue;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px blue;">
+    <div style="
+    height: 100%;
+    background-color: rgb(19, 20, 68);
+    padding-top: 4px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px rgb(0, 255, 106);">
+    <p style="color: white;
+    padding-left: 10px;">
+     Rolling out of daily airdrop
+    </p></div></div> 
+    </div>
+</div>
+<div>
+    <div style="height: 70%;
+    background-color: yellow;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 70%;
+    margin-left: 20px;
+    box-shadow: 5px 5px 5px;">
+    <div style="
+    height: 100%;
+    background-color: blue;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px blue;">
+    <div style="
+    height: 100%;
+    background-color: rgb(19, 20, 68);
+    padding-top: 4px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px rgb(0, 255, 106);">
+    <p style="color: white;
+    padding-left: 10px;">
+    California road and billboard show
+    </p></div></div> 
+    </div>
+</div>
+<div>
+    <div style="height: 70%;
+    background-color: yellow;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 70%;
+    margin-left: 20px;
+    box-shadow: 5px 5px 5px;">
+    <div style="
+    height: 100%;
+    background-color: blue;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px blue;">
+    <div style="
+    height: 100%;
+    background-color: rgb(19, 20, 68);
+    padding-top: 4px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px rgb(0, 255, 106);">
+    <p style="color: white;
+    padding-left: 10px;">
+Rolling out the back end solution.
+    </p></div></div> 
+    </div>
+</div>
+</div>
+
+<div style="display: grid;
+background-color: white;
+grid-template-columns: 1fr 1fr;
+column-gap: 10px;
+row-gap: 10px;">
+<div>
+    <div style="height: 70%;
+    background-color: yellow;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 70%;
+    margin-left: 20px;
+    box-shadow: 5px 5px 5px;">
+    <div style="
+    height: 100%;
+    background-color: blue;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px blue;">
+    <div style="
+    height: 100%;
+    background-color: rgb(19, 20, 68);
+    padding-top: 4px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px rgb(0, 255, 106);">
+    <p style="color: white;
+    padding-left: 10px;">
+     Partnership with Binance US
+    </p></div></div> 
+    </div>
+</div>
+<div>
+    <div style="height: 70%;
+    background-color: yellow;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 70%;
+    margin-left: 20px;
+    box-shadow: 5px 5px 5px;">
+    <div style="
+    height: 100%;
+    background-color: blue;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px blue;">
+    <div style="
+    height: 100%;
+    background-color: rgb(19, 20, 68);
+    padding-top: 4px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px rgb(0, 255, 106);">
+    <p style="color: white;
+    padding-left: 10px;">
+     Marketing (Asian market)
+    </p></div></div> 
+    </div>
+</div>
+<div>
+    <div style="height: 70%;
+    background-color: yellow;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 70%;
+    margin-left: 20px;
+    box-shadow: 5px 5px 5px;">
+    <div style="
+    height: 100%;
+    background-color: blue;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px blue;">
+    <div style="
+    height: 100%;
+    background-color: rgb(19, 20, 68);
+    padding-top: 4px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px rgb(0, 255, 106);">
+    <p style="color: white;
+    padding-left: 10px;">
+     Binance US listing
+    </p></div></div> 
+    </div>
+</div>
+<div>
+    <div style="height: 70%;
+    background-color: yellow;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 70%;
+    margin-left: 20px;
+    box-shadow: 5px 5px 5px;">
+    <div style="
+    height: 100%;
+    background-color: blue;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px blue;">
+    <div style="
+    height: 100%;
+    background-color: rgb(19, 20, 68);
+    padding-top: 4px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px rgb(0, 255, 106);">
+    <p style="color: white;
+    padding-left: 10px;">
+     Marketing (Europe)
+    </p></div></div> 
+    </div>
+</div>
+</div>
+
+<div style="display: grid;
+background-color: white;
+grid-template-columns: 1fr 1fr;
+column-gap: 10px;
+row-gap: 10px;">
+<div>
+    <div style="height: 70%;
+    background-color: yellow;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 70%;
+    margin-left: 20px;
+    box-shadow: 5px 5px 5px;">
+    <div style="
+    height: 100%;
+    background-color: blue;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px blue;">
+    <div style="
+    height: 100%;
+    background-color: rgb(19, 20, 68);
+    padding-top: 4px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px rgb(0, 255, 106);">
+    <p style="color: white;
+    padding-left: 10px;">
+     Miami road and billboard show
+    </p></div></div> 
+    </div>
+</div>
+<div>
+    <div style="height: 70%;
+    background-color: yellow;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 70%;
+    margin-left: 20px;
+    box-shadow: 5px 5px 5px;">
+    <div style="
+    height: 100%;
+    background-color: blue;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px blue;">
+    <div style="
+    height: 100%;
+    background-color: rgb(19, 20, 68);
+    padding-top: 4px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px rgb(0, 255, 106);">
+    <p style="color: white;
+    padding-left: 10px;">
+     Community burn
+    </p></div></div> 
+    </div>
+</div>
+<div>
+    <div style="height: 70%;
+    background-color: yellow;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 70%;
+    margin-left: 20px;
+    box-shadow: 5px 5px 5px;">
+    <div style="
+    height: 100%;
+    background-color: blue;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px blue;">
+    <div style="
+    height: 100%;
+    background-color: rgb(19, 20, 68);
+    padding-top: 4px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px rgb(0, 255, 106);">
+    <p style="color: white;
+    padding-left: 10px;">
+     First dog humanitarian campaign
+    </p></div></div> 
+    </div>
+</div>
+<div>
+    <div style="height: 70%;
+    background-color: yellow;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 70%;
+    margin-left: 20px;
+    box-shadow: 5px 5px 5px;">
+    <div style="
+    height: 100%;
+    background-color: blue;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px blue;">
+    <div style="
+    height: 100%;
+    background-color: rgb(19, 20, 68);
+    padding-top: 4px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px rgb(0, 255, 106);">
+    <p style="color: white;
+    padding-left: 10px;">
+     Sending NFT to dog owners
+    </p></div></div> 
+    </div>
+</div>
+</div>
+
+<div style="display: grid;
+background-color: white;
+grid-template-columns: 1fr 1fr;
+column-gap: 10px;
+row-gap: 10px;">
+<div>
+    <div style="height: 70%;
+    background-color: yellow;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 70%;
+    margin-left: 20px;
+    box-shadow: 5px 5px 5px;">
+    <div style="
+    height: 100%;
+    background-color: blue;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px blue;">
+    <div style="
+    height: 100%;
+    background-color: rgb(19, 20, 68);
+    padding-top: 4px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px rgb(0, 255, 106);">
+    <p style="color: white;
+    padding-left: 10px;">
+     Unveiling Labrador headquarters US
+    </p></div></div> 
+    </div>
+</div>
+<div>
+    <div style="height: 70%;
+    background-color: yellow;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 70%;
+    margin-left: 20px;
+    box-shadow: 5px 5px 5px;">
+    <div style="
+    height: 100%;
+    background-color: blue;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px blue;">
+    <div style="
+    height: 100%;
+    background-color: rgb(19, 20, 68);
+    padding-top: 4px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px rgb(0, 255, 106);">
+    <p style="color: white;
+    padding-left: 10px;">
+World number one meme token
+    </p></div></div> 
+    </div>
+</div>
+<div>
+    <div style="height: 70%;
+    background-color: yellow;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 70%;
+    margin-left: 20px;
+    box-shadow: 5px 5px 5px;">
+    <div style="
+    height: 100%;
+    background-color: blue;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px blue;">
+    <div style="
+    height: 100%;
+    background-color: rgb(19, 20, 68);
+    padding-top: 4px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px rgb(0, 255, 106);">
+    <p style="color: white;
+    padding-left: 10px;">
+     Community burn
+    </p></div></div> 
+    </div>
+</div>
+<div>
+    <div style="height: 70%;
+    background-color: yellow;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 70%;
+    margin-left: 20px;
+    box-shadow: 5px 5px 5px;">
+    <div style="
+    height: 100%;
+    background-color: blue;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px blue;">
+    <div style="
+    height: 100%;
+    background-color: rgb(19, 20, 68);
+    padding-top: 4px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px rgb(0, 255, 106);">
+    <p style="color: white;
+    padding-left: 10px;">
+     Launch payment solutions
+    </p></div></div> 
+    </div>
+</div>
+</div>
+
+<div style="display: grid;
+background-color: white;
+grid-template-columns: 1fr 1fr;
+column-gap: 10px;
+row-gap: 10px;">
+<div>
+    <div style="height: 70%;
+    background-color: yellow;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 70%;
+    margin-left: 20px;
+    box-shadow: 5px 5px 5px;">
+    <div style="
+    height: 100%;
+    background-color: blue;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px blue;">
+    <div style="
+    height: 100%;
+    background-color: rgb(19, 20, 68);
+    padding-top: 4px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px rgb(0, 255, 106);">
+    <p style="color: white;
+    padding-left: 10px;">
+     Private sale of tokens starts
+    </p></div></div> 
+    </div>
+</div>
+<div>
+    <div style="height: 70%;
+    background-color: yellow;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 70%;
+    margin-left: 20px;
+    box-shadow: 5px 5px 5px;">
+    <div style="
+    height: 100%;
+    background-color: blue;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px blue;">
+    <div style="
+    height: 100%;
+    background-color: rgb(19, 20, 68);
+    padding-top: 4px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px rgb(0, 255, 106);">
+    <p style="color: white;
+    padding-left: 10px;">
+2nd marketing campaign
+    </p></div></div> 
+    </div>
+</div>
+<div>
+    <div style="height: 70%;
+    background-color: yellow;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 70%;
+    margin-left: 20px;
+    box-shadow: 5px 5px 5px;">
+    <div style="
+    height: 100%;
+    background-color: blue;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px blue;">
+    <div style="
+    height: 100%;
+    background-color: rgb(19, 20, 68);
+    padding-top: 4px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px rgb(0, 255, 106);">
+    <p style="color: white;
+    padding-left: 10px;">
+     Adding extra utility to the system
+    </p></div></div> 
+    </div>
+</div>
+<div>
+    <div style="height: 70%;
+    background-color: yellow;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 70%;
+    margin-left: 20px;
+    box-shadow: 5px 5px 5px;">
+    <div style="
+    height: 100%;
+    background-color: blue;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px blue;">
+    <div style="
+    height: 100%;
+    background-color: rgb(19, 20, 68);
+    padding-top: 4px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px rgb(0, 255, 106);">
+    <p style="color: white;
+    padding-left: 10px;">
+    Add more utility to token
+    </p></div></div> 
+    </div>
+</div>
+</div>
+
+<div style="display: grid;
+background-color: white;
+grid-template-columns: 1fr 1fr;
+column-gap: 10px;
+row-gap: 10px;">
+<div>
+    <div style="height: 70%;
+    background-color: yellow;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 70%;
+    margin-left: 20px;
+    box-shadow: 5px 5px 5px;">
+    <div style="
+    height: 100%;
+    background-color: blue;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px blue;">
+    <div style="
+    height: 100%;
+    background-color: rgb(19, 20, 68);
+    padding-top: 4px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px rgb(0, 255, 106);">
+    <p style="color: white;
+    padding-left: 10px;">
+    Launch of AI meme marketplace
+    </p></div></div> 
+    </div>
+</div>
+<div>
+    <div style="height: 70%;
+    background-color: yellow;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 70%;
+    margin-left: 20px;
+    box-shadow: 5px 5px 5px;">
+    <div style="
+    height: 100%;
+    background-color: blue;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px blue;">
+    <div style="
+    height: 100%;
+    background-color: rgb(19, 20, 68);
+    padding-top: 4px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px rgb(0, 255, 106);">
+    <p style="color: white;
+    padding-left: 10px;">
+     Adoption as payment system
+    </p></div></div> 
+    </div>
+</div>
+<div>
+    <div style="height: 70%;
+    background-color: yellow;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 70%;
+    margin-left: 20px;
+    box-shadow: 5px 5px 5px;">
+    <div style="
+    height: 100%;
+    background-color: blue;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px blue;">
+    <div style="
+    height: 100%;
+    background-color: rgb(19, 20, 68);
+    padding-top: 4px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px rgb(0, 255, 106);">
+    <p style="color: white;
+    padding-left: 10px;">
+     Partnership with Shiba Inu
+    </p></div></div> 
+    </div>
+</div>
+<div>
+    <div style="height: 70%;
+    background-color: yellow;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 70%;
+    margin-left: 20px;
+    box-shadow: 5px 5px 5px;">
+    <div style="
+    height: 100%;
+    background-color: blue;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px blue;">
+    <div style="
+    height: 100%;
+    background-color: rgb(19, 20, 68);
+    padding-top: 4px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px rgb(0, 255, 106);">
+    <p style="color: white;
+    padding-left: 10px;">
+     Marketing campaign
+    </p></div></div> 
+    </div>
+</div>
+</div>
+
+<div style="display: grid;
+background-color: white;
+grid-template-columns: 1fr 1fr;
+column-gap: 10px;
+row-gap: 10px;">
+<div>
+    <div style="height: 70%;
+    background-color: yellow;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 70%;
+    margin-left: 20px;
+    box-shadow: 5px 5px 5px;">
+    <div style="
+    height: 100%;
+    background-color: blue;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px blue;">
+    <div style="
+    height: 100%;
+    background-color: rgb(19, 20, 68);
+    padding-top: 4px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px rgb(0, 255, 106);">
+    <p style="color: white;
+    padding-left: 10px;">
+     liquidity pool launch
+    </p></div></div> 
+    </div>
+</div>
+<div>
+    <div style="height: 70%;
+    background-color: yellow;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 70%;
+    margin-left: 20px;
+    box-shadow: 5px 5px 5px;">
+    <div style="
+    height: 100%;
+    background-color: blue;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px blue;">
+    <div style="
+    height: 100%;
+    background-color: rgb(19, 20, 68);
+    padding-top: 4px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px rgb(0, 255, 106);">
+    <p style="color: white;
+    padding-left: 10px;">
+     Partnership with Snoop Dogg
+    </p></div></div> 
+    </div>
+</div>
+<div>
+    <div style="height: 70%;
+    background-color: yellow;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 70%;
+    margin-left: 20px;
+    box-shadow: 5px 5px 5px;">
+    <div style="
+    height: 100%;
+    background-color: blue;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px blue;">
+    <div style="
+    height: 100%;
+    background-color: rgb(19, 20, 68);
+    padding-top: 4px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px rgb(0, 255, 106);">
+    <p style="color: white;
+    padding-left: 10px;">
+     Houston TX Labrador meet ups
+    </p></div></div> 
+    </div>
+</div>
+<div>
+    <div style="height: 70%;
+    background-color: yellow;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 70%;
+    margin-left: 20px;
+    box-shadow: 5px 5px 5px;">
+    <div style="
+    height: 100%;
+    background-color: blue;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px blue;">
+    <div style="
+    height: 100%;
+    background-color: rgb(19, 20, 68);
+    padding-top: 4px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px rgb(0, 255, 106);">
+    <p style="color: white;
+    padding-left: 10px;">
+     Launch of pet rescue
+    </p></div></div> 
+    </div>
+</div>
+</div>
+
+<div style="display: grid;
+background-color: white;
+grid-template-columns: 1fr 1fr;
+column-gap: 10px;
+row-gap: 10px;">
+<div>
+    <div style="height: 70%;
+    background-color: yellow;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 70%;
+    margin-left: 20px;
+    box-shadow: 5px 5px 5px;">
+    <div style="
+    height: 100%;
+    background-color: blue;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px blue;">
+    <div style="
+    height: 100%;
+    background-color: rgb(19, 20, 68);
+    padding-top: 4px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px rgb(0, 255, 106);">
+    <p style="color: white;
+    padding-left: 10px;">
+     Listing on uphold
+    </p></div></div> 
+    </div>
+</div>
+<div>
+    <div style="height: 70%;
+    background-color: yellow;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 70%;
+    margin-left: 20px;
+    box-shadow: 5px 5px 5px;">
+    <div style="
+    height: 100%;
+    background-color: blue;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px blue;">
+    <div style="
+    height: 100%;
+    background-color: rgb(19, 20, 68);
+    padding-top: 4px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px rgb(0, 255, 106);">
+    <p style="color: white;
+    padding-left: 10px;">
+    Coming soon...
+    </p></div></div> 
+    </div>
+</div>
+<div>
+    <div style="height: 70%;
+    background-color: yellow;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 70%;
+    margin-left: 20px;
+    box-shadow: 5px 5px 5px;">
+    <div style="
+    height: 100%;
+    background-color: blue;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px blue;">
+    <div style="
+    height: 100%;
+    background-color: rgb(19, 20, 68);
+    padding-top: 4px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px rgb(0, 255, 106);">
+    <p style="color: white;
+    padding-left: 10px;">
+     Marketing campaign
+    </p></div></div> 
+    </div>
+</div>
+<div>
+    <div style="height: 70%;
+    background-color: yellow;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 70%;
+    margin-left: 20px;
+    box-shadow: 5px 5px 5px;">
+    <div style="
+    height: 100%;
+    background-color: blue;
+    padding-top: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px blue;">
+    <div style="
+    height: 100%;
+    background-color: rgb(19, 20, 68);
+    padding-top: 4px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 5px;
+    box-shadow: 5px 5px 5px rgb(0, 255, 106);">
+    <p style="color: white;
+    padding-left: 10px;">
+     Coming soon..
+    </p></div></div> 
+    </div>
+</div>
+</div>
+
+
+</div>
+
+<div class="last-div">
+    <div>100 QUADRILLION TOTAL SUPPLY
+        50% of the QUACK supply 
+        was seeded as liquidity & 50% goes 
+        straight into our Black 
+        Hole Algorithm.</div>
+    <div>MONEY BIN LOCKED FOR 5 YEARS
+        Liquidity Locked on Team.Finance. 
+        It's in our best interest to keep our 
+        Loyal Holders Safe from RUG.
+    </div>
+    <div>12% TRANSACTION FEE
+        4% Holder Rewards, 4% Auto Liquidity, 
+        2% Quack PUMP & Burn Wallet, 
+        2% Marketing & Dev Wallet</div>
+    <div>3% ECOSYSTEM REWARDS
+        1% in Deployer Wallet
+         &  2% Locked in Team.
+        Finance for Airdrop & Staking Rewards!
+    </div>
+    <div>The 53.698 quadrillion QUACK 
+        inside the blackhole 
+        will also receive 4% holder rewards.
+        53.7%
+        
+        QUACK
+        BURNED
+        
+        This results in super fast burn rate 
+        and exponential growth of the black hole.
+    </div>
+    <div>QUACK is made up of diamond hand
+         investors that are looking to support 
+         projects in the long term. We can't 
+         stop quacking about our investment. 
+         With 350,000+ followers strong that can 
+         be heard in more than a dozen languages 
+         across multiple social media platforms.
+    </div>
+</div>
+
+    </body>
+</html>
+
+
